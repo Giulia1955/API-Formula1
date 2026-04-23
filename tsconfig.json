@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    // ─── File Layout ───
+    "rootDir": "./API/src",
+    "baseUrl": "./",
+    "paths": {
+      "@config/*": ["API/src/config/*"],
+      "@modules/*": ["API/src/modules/*"],
+      "@shared/*": ["API/src/shared/*"]
+    },
+    // "outDir": "./dist",
+
+    // ─── Decorators (Essenciais para o TypeORM) ───
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,
+    
+    // ─── Environment Settings ───
+    "module": "commonjs",
+    "target": "esnext",
+    "types": ["node"],
+    
+    // ─── Other Outputs ───
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // ─── Stricter Typechecking Options ───
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "esModuleInterop": true,
+
+    // ─── Recommended Options ───
+    "strict": true,
+    "jsx": "react-jsx",
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+    "ignoreDeprecations": "6.0"
+  }
+}
