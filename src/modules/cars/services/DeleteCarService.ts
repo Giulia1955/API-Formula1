@@ -13,7 +13,7 @@ export default class DeleteCarService {
         const car = await carRepository.findOneBy({id});
 
         if (!car) {
-            throw new AppError("Product not found.");
+            throw new AppError("Car not found.");
         }
 
         await carRepository.remove(car);

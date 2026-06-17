@@ -1,4 +1,4 @@
-import Car from "API/src/modules/cars/typeorm/entities/Car";
+import Car from "../../modules/cars/typeorm/entities/Car";
 import path from "path";
 import { DataSource } from "typeorm";
 
@@ -11,5 +11,5 @@ export const AppDataSource = new DataSource({
     database: "apiformula1",
     synchronize: false,
     entities: [Car],
-    migrations: [path.join("API", "src", "shared", "typeorm", "migrations", "*.ts")]
+    migrations: [path.join(__dirname, "migrations", "*.ts")]
 });

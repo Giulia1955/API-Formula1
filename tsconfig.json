@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
     // ─── File Layout ───
-    "rootDir": "./API/src",
-    "baseUrl": "./",
+    "rootDir": "./src",
+    "baseUrl": ".",
     "paths": {
-      "@config/*": ["API/src/config/*"],
-      "@modules/*": ["API/src/modules/*"],
-      "@shared/*": ["API/src/shared/*"]
+      "@config/*": ["src/config/*"],
+      "@modules/*": ["src/modules/*"],
+      "@shared/*": ["src/shared/*"]
     },
     // "outDir": "./dist",
 
@@ -24,6 +24,7 @@
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
+    "ignoreDeprecations": "6.0",
 
     // ─── Stricter Typechecking Options ───
     "noUncheckedIndexedAccess": true,
@@ -34,9 +35,7 @@
     "strict": true,
     "jsx": "react-jsx",
     "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
-    "skipLibCheck": true,
-    "ignoreDeprecations": "6.0"
+    "skipLibCheck": true
   }
 }
