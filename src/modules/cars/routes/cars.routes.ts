@@ -1,9 +1,12 @@
 import { Router } from 'express';
 import CarsController from '../controllers/CarController';
 import { celebrate, Joi, Segments } from "celebrate";
+import isAuthenticated from "@shared/http/middlewares/isAuthenticated";
 
 const carsRouter = Router();
 const carsController = new CarsController(); 
+
+carsRouter.use(isAuthenticated);
 
 carsRouter.get('/', async (req, res, next) => {
     try {

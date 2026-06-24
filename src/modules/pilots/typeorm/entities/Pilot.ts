@@ -1,27 +1,25 @@
 import Team from "@modules/teams/typeorm/entities/Team";
 import { Column, CreateDateColumn, Entity, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
-@Entity('cars') 
-export default class Car {
+@Entity('pilots')
+export default class Pilot {
     @PrimaryGeneratedColumn('uuid')
     id: string;
     @Column()
-    driver: string;
+    name: string;
     @Column()
-    team: string;
-    @Column('int')
-    carNumber: number;
+    country: string
     @Column()
-    manufacturer: string;
+    type: string;
     @Column('int')
-    championshipPosition: number;
+    age: number;
     @OneToMany(
         () => Team,
-        team => team.car
+        team => team.pilot
     )
     teams: Team[];
     @CreateDateColumn()
     created_at: Date;
-    @UpdateDateColumn() 
-    updated_at: Date;  
+    @UpdateDateColumn()
+    updated_at: Date;
 }
